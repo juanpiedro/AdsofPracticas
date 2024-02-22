@@ -1,0 +1,39 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>530</x><y>80</y><w>100</w><h>50</h></coordinates><panel_attributes>Videojuego
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>380</x><y>180</y><w>130</w><h>60</h></coordinates><panel_attributes>Personaje
+--
+- fotoAvatar: String
+- nombre: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>140</x><y>180</y><w>130</w><h>60</h></coordinates><panel_attributes>/Enemigo/
+--
+- gritoGuerra: String
+- radio: int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>330</y><w>100</w><h>40</h></coordinates><panel_attributes>Estandar
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>190</x><y>330</y><w>150</w><h>50</h></coordinates><panel_attributes>Jefe
+--
+- ratioRegeneracion: int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>420</y><w>100</w><h>30</h></coordinates><panel_attributes>MaquinaEstados
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>170</x><y>530</y><w>240</w><h>80</h></coordinates><panel_attributes>Transicion
+--
+- valorTransicion: int
+- transiciona: boolean
+--
++ cambioDeEstado(Estado e): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>530</y><w>150</w><h>80</h></coordinates><panel_attributes>Estado
+--
+- multiplicador: double
+- ataca: boolean
+- movimiento: Direccion</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>300</y><w>200</w><h>60</h></coordinates><panel_attributes>Control
+--
+--
++ obtenerMovimiento(): Direccion
++ atacar(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>290</x><y>60</y><w>100</w><h>60</h></coordinates><panel_attributes>Entidad
+--
+- velocidad: int
+- fuerza: int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>530</y><w>80</w><h>150</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+Direccion
+--
++ NORTE
++ SUR
++ ESTE
++ OESTE
++ ALEJAR
++ ACERCAR
++ QUIETO
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>310</x><y>420</y><w>100</w><h>30</h></coordinates><panel_attributes>Ciclo</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>230</y><w>120</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;100;50;10;50;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>230</y><w>110</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50;90;50;90;100</additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>110</y><w>150</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>130;10;130;50;10;50;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>110</y><w>120</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50;100;50;100;70</additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>440</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>440</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element></diagram>
