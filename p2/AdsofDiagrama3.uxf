@@ -1,0 +1,76 @@
+<diagram program="umletino" version="15.1"><zoom_level>12</zoom_level><element><id>UMLClass</id><coordinates><x>648</x><y>156</y><w>396</w><h>204</h></coordinates><panel_attributes>&lt;&lt;Singleton&gt;&gt;
+Videojuego
+--
++personajesEnRatio(origen:Localizacion):Entidad[*]
++isGameOver():Boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1356</x><y>444</y><w>204</w><h>108</h></coordinates><panel_attributes>Personaje
+--
+- fotoAvatar: String
+- nombre: String
++restarVidaPorCiclo():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1068</x><y>444</y><w>228</w><h>120</h></coordinates><panel_attributes>/Enemigo/
+--
+- gritoGuerra: String
+- radio: int
+--
++confGritoGuerra(s:String):void
++confRadio(s:String):void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>960</x><y>684</y><w>120</w><h>48</h></coordinates><panel_attributes>Estandar
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1128</x><y>696</y><w>252</w><h>84</h></coordinates><panel_attributes>Jefe
+--
+- ratioRegeneracion: int
+--
++regenerarVidaPorCiclo():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>456</x><y>372</y><w>216</w><h>120</h></coordinates><panel_attributes>MaquinaEstados
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>636</x><y>588</y><w>288</w><h>96</h></coordinates><panel_attributes>Transicion
+--
++ cambioDeEstado(Estado e): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>348</x><y>588</y><w>180</w><h>96</h></coordinates><panel_attributes>Estado
+--
+- multiplicador: double
+- ataca: boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1656</x><y>444</y><w>240</w><h>72</h></coordinates><panel_attributes>Control
+--
++ obtenerMovimiento(): Direccion
++ atacar(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1248</x><y>228</y><w>192</w><h>144</h></coordinates><panel_attributes>Entidad
+--
+- velocidad: int
+- fuerza: int
+- vida:int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>528</y><w>240</w><h>204</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+Direccion
+--
++ NORTE
++ SUR
++ ESTE
++ OESTE
++ ALEJARSE_DE_MAS_CERCANO
++ ACERCARSE_A_MAS_CERCANO
++ EN_REPOSO
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>816</x><y>0</y><w>168</w><h>72</h></coordinates><panel_attributes>Ciclo
+--
++cicloNuevo():Boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1020</x><y>552</y><w>144</w><h>156</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;100;50;10;50;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>1128</x><y>552</y><w>132</w><h>168</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50;90;50;90;120</additional_attributes></element><element><id>Relation</id><coordinates><x>1152</x><y>360</y><w>180</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>130;10;130;50;10;50;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>1296</x><y>360</y><w>144</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50;100;50;100;70</additional_attributes></element><element><id>Relation</id><coordinates><x>468</x><y>480</y><w>84</w><h>132</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+estados
+m2=*</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>648</x><y>480</y><w>120</w><h>132</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+transiciones
+m2=*</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>468</y><w>432</w><h>48</h></coordinates><panel_attributes>lt=&lt;-&gt;
+m1=estado
+m2=pertenece</panel_attributes><additional_attributes>10;10;340;10</additional_attributes></element><element><id>Relation</id><coordinates><x>228</x><y>612</y><w>144</w><h>48</h></coordinates><panel_attributes>lt=&lt;-
+movimiento</panel_attributes><additional_attributes>10;20;100;20</additional_attributes></element><element><id>Relation</id><coordinates><x>516</x><y>600</y><w>144</w><h>60</h></coordinates><panel_attributes>lt=-&gt;
+m2=*
+transición</panel_attributes><additional_attributes>10;20;100;20</additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>672</y><w>384</w><h>108</h></coordinates><panel_attributes>lt=&lt;-
+estadoDestino</panel_attributes><additional_attributes>10;10;10;70;300;70;300;10</additional_attributes></element><element><id>Relation</id><coordinates><x>864</x><y>672</y><w>36</w><h>144</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>756</x><y>792</y><w>252</w><h>192</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+TipoTransicion
+--
++VIDA_MAYOR
++VIDA_MENOR
++MAYOR_PERSONAJES_EN_RATIO
++MENOR_PERSONAJES_EN_RATIO
+--
+-valorCondicion:Integer
+--
++testCondicion(e:Enemigo)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1032</x><y>168</y><w>480</w><h>300</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+personajes
+m2=*</panel_attributes><additional_attributes>10;20;370;20;370;230</additional_attributes></element><element><id>Relation</id><coordinates><x>1032</x><y>204</y><w>156</w><h>264</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+enemigos
+m2=*</panel_attributes><additional_attributes>10;10;60;10;60;200</additional_attributes></element><element><id>Relation</id><coordinates><x>1548</x><y>456</y><w>132</w><h>48</h></coordinates><panel_attributes>lt=&lt;-
+input</panel_attributes><additional_attributes>90;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1656</x><y>192</y><w>252</w><h>84</h></coordinates><panel_attributes>Localización
+--
+-xcoord:Integer
+-ycoord:Integer
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1428</x><y>216</y><w>252</w><h>48</h></coordinates><panel_attributes>lt=&lt;-
+localizacion</panel_attributes><additional_attributes>190;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>876</x><y>60</y><w>36</w><h>120</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element></diagram>
