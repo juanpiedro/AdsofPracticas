@@ -1,0 +1,50 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>710</x><y>320</y><w>210</w><h>190</h></coordinates><panel_attributes>Ingrediente
+--
+-nombre:String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1060</x><y>320</y><w>120</w><h>170</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+TipoIngrediente
+--
++CARNE
++PESCADO
++FRUTA_VERDURA
++LEGUMBRE
++CEREAL
++HUEVO
++LACTEO
++OTROS</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>270</x><y>290</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+InformacionNutricional
+--
+-calorias:Double
+-hidratos:Double
+-grasasTotales:Double
+-grasasSaturadas:Double
+-proteinas:Double
+-azucares:Double
+-fibra:Double
+-sodio:Double
+-
++getInfo(): Double[*]</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>400</y><w>260</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;240;10</additional_attributes></element><element><id>Relation</id><coordinates><x>910</x><y>400</y><w>170</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>150;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>170</x><y>580</y><w>160</w><h>70</h></coordinates><panel_attributes>InfoNutricionalPeso
+--
+-
++getInfo(): Double[*]</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>580</y><w>150</w><h>70</h></coordinates><panel_attributes>InfoNutricionalUnidad
+--
+-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>430</x><y>470</y><w>30</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>470</y><w>30</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>760</x><y>80</y><w>110</w><h>110</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+Alergeno
+--
++GLUTEN
++LACTOSA
++HUEVOS
++FRUTOS_SECOS</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>800</x><y>180</y><w>40</w><h>160</h></coordinates><panel_attributes>lt=&lt;-
+m1=*</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>570</y><w>280</w><h>80</h></coordinates><panel_attributes>Plato
+--
+--
++addIngrediente(i: Ingrediente): Boolean
++addPlato(p: Plato): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1020</x><y>570</y><w>120</w><h>70</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+Elemento
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>920</x><y>590</y><w>120</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>730</x><y>630</y><w>350</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+
+m2=1..* 
+elementos
+m1=</panel_attributes><additional_attributes>10;20;10;50;310;50;310;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1030</x><y>630</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>860</x><y>500</y><w>240</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>220;70;220;30;10;30;10;10</additional_attributes></element></diagram>
